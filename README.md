@@ -26,3 +26,4 @@ curl http://localhost:80/user1/index.html - результат должен со
 
 curl http://localhost:80/user2/index.html - результат должен содержать "Hello User2!"
 
+docker pull jkepeer1/loadbalancer
