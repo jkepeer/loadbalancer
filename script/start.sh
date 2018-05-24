@@ -1,6 +1,6 @@
 #/bin/sh
 
-cat ../conf/nginx1.conf > ../default.conf
+
 echo  "upstream user1 {" > default.conf
 docker ps|grep -v CONTAINER|grep user1|awk '{print $1}'|xargs docker inspect --format '{{ .NetworkSettings.IPAddress }}'|awk '{print "server " $1 ":80;"}' >> default.conf
 echo  "}" >> default.conf
