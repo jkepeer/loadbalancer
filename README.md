@@ -12,7 +12,7 @@ docker run -d -p :80 {username}/user2
 
 docker run -d -p :80 {username}/user2
 
-## любое количество и порядок старта## 
+## любое количество и порядок старта ## 
 
 cd script
 
@@ -21,7 +21,7 @@ cd script
 ./start.sh
 
 
-
+## ## ## ## ## ## ## ## 
 2. Service discovery. Loadbalancer
 
 Создать докер приложение {username}/loadbalancer (на базе nginx, haproxy или чего-то другого)
