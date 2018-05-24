@@ -1,3 +1,27 @@
+
+
+git clone https://github.com/jkepeer/loadbalancer.git
+
+cd loadbalancer
+
+docker run -d -p :80 {username}/user1
+
+docker run -d -p :80 {username}/user1
+
+docker run -d -p :80 {username}/user2
+
+docker run -d -p :80 {username}/user2
+
+## любое количество и порядок старта## 
+
+cd script
+
+## запуск самого балансера ## 
+
+./start.sh
+
+
+
 2. Service discovery. Loadbalancer
 
 Создать докер приложение {username}/loadbalancer (на базе nginx, haproxy или чего-то другого)
@@ -26,4 +50,4 @@ curl http://localhost:80/user1/index.html - результат должен со
 
 curl http://localhost:80/user2/index.html - результат должен содержать "Hello User2!"
 
-docker pull jkepeer1/loadbalancer
+
