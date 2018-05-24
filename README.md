@@ -2,7 +2,11 @@
 
 git clone https://github.com/jkepeer/loadbalancer.git
 
-cd loadbalancer
+cd loadbalancer/user
+
+docker build -t jkepeer1/user1 .
+
+docker build -t jkepeer1/user2 .
 
 docker run -d -p :80 {username}/user1
 
@@ -14,7 +18,7 @@ docker run -d -p :80 {username}/user2
 
 ## любое количество и порядок старта ## 
 
-cd script
+cd ../script
 
 ## запуск самого балансера ## 
 
