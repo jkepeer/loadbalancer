@@ -8,24 +8,24 @@ docker build -t jkepeer1/user1 .
 
 docker build -t jkepeer1/user2 .
 
-docker run -d -p :80 {username}/user1
+## любое количество и порядок старта ##
 
-docker run -d -p :80 {username}/user1
+docker run -d -p :80 jkepeer1/user1
 
-docker run -d -p :80 {username}/user2
+docker run -d -p :80 jkepeer1/user1
 
-docker run -d -p :80 {username}/user2
+docker run -d -p :80 jkepeer1/user2
 
-## любое количество и порядок старта ## 
+docker run -d -p :80 jkepeer1/user2
+
+## запуск самого балансера ##  
 
 cd ../script
 
-## запуск самого балансера ## 
-
 ./start.sh
 
-
 ## ## ## ## ## ## ## ## 
+
 2. Service discovery. Loadbalancer
 
 Создать докер приложение {username}/loadbalancer (на базе nginx, haproxy или чего-то другого)
